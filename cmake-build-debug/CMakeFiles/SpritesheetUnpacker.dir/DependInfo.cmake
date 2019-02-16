@@ -4,12 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/Users/mendesbarreto/Git/SpritesheetUnpacker/SDLProgram.cpp" "/Users/mendesbarreto/Git/SpritesheetUnpacker/cmake-build-debug/CMakeFiles/SpritesheetUnpacker.dir/SDLProgram.cpp.o"
   "/Users/mendesbarreto/Git/SpritesheetUnpacker/main.cpp" "/Users/mendesbarreto/Git/SpritesheetUnpacker/cmake-build-debug/CMakeFiles/SpritesheetUnpacker.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/usr/local/include/SDL2"
   )
 
 # Targets to which this target links.

@@ -123,6 +123,33 @@ SpritesheetUnpacker/fast:
 	$(MAKE) -f CMakeFiles/SpritesheetUnpacker.dir/build.make CMakeFiles/SpritesheetUnpacker.dir/build
 .PHONY : SpritesheetUnpacker/fast
 
+SDLProgram.o: SDLProgram.cpp.o
+
+.PHONY : SDLProgram.o
+
+# target to build an object file
+SDLProgram.cpp.o:
+	$(MAKE) -f CMakeFiles/SpritesheetUnpacker.dir/build.make CMakeFiles/SpritesheetUnpacker.dir/SDLProgram.cpp.o
+.PHONY : SDLProgram.cpp.o
+
+SDLProgram.i: SDLProgram.cpp.i
+
+.PHONY : SDLProgram.i
+
+# target to preprocess a source file
+SDLProgram.cpp.i:
+	$(MAKE) -f CMakeFiles/SpritesheetUnpacker.dir/build.make CMakeFiles/SpritesheetUnpacker.dir/SDLProgram.cpp.i
+.PHONY : SDLProgram.cpp.i
+
+SDLProgram.s: SDLProgram.cpp.s
+
+.PHONY : SDLProgram.s
+
+# target to generate assembly for a file
+SDLProgram.cpp.s:
+	$(MAKE) -f CMakeFiles/SpritesheetUnpacker.dir/build.make CMakeFiles/SpritesheetUnpacker.dir/SDLProgram.cpp.s
+.PHONY : SDLProgram.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -159,6 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... SpritesheetUnpacker"
+	@echo "... SDLProgram.o"
+	@echo "... SDLProgram.i"
+	@echo "... SDLProgram.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

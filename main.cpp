@@ -1,7 +1,9 @@
 #include <iostream>
+#include "SDLProgram.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    getchar();
-    return 0;
+    std::cout << "Starting SDL" << std::endl;
+    auto sdlProgram = std::make_unique<SDLProgram>();
+    std::cout << "RUNNING SDL" << std::endl;
+    return sdlProgram->startSDLUpdate();
 }
