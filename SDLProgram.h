@@ -7,7 +7,7 @@
 
 #include "SDL.h"
 
-class SDLProgram {
+class SDLProgram final{
 public:
     SDL_Window* m_window;
     SDL_Surface* m_windowSurface;
