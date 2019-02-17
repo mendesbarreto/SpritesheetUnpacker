@@ -6,12 +6,14 @@
 #define SPRITESHEETUNPACKER_SDLPROGRAM_H
 
 #include "SDL.h"
+#include "SDL_image.h"
+
+const int IMG_DEFAULT_EXTENSIONS_FLAGS = IMG_INIT_JPG | IMG_INIT_PNG;
 
 class SDLProgram final{
 public:
     SDL_Window* m_window;
-    SDL_Surface* m_windowSurface;
-
+    SDL_Renderer* m_render;
 
 public:
     SDLProgram();
@@ -20,7 +22,9 @@ public:
 private:
     void initSDLVideo();
     void createWindow();
-    void setupWindow();
+    void createRender();
+    void setupBackgroundRender();
+    void setupImageExtensionAllowed();
 };
 
 

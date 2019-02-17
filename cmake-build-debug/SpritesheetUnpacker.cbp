@@ -82,10 +82,19 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/mendesbarreto/Git/SpritesheetUnpacker/SDLExceptionThrower.h">
+			<Option target="SpritesheetUnpacker"/>
+		</Unit>
 		<Unit filename="/Users/mendesbarreto/Git/SpritesheetUnpacker/SDLProgram.cpp">
 			<Option target="SpritesheetUnpacker"/>
 		</Unit>
 		<Unit filename="/Users/mendesbarreto/Git/SpritesheetUnpacker/SDLProgram.h">
+			<Option target="SpritesheetUnpacker"/>
+		</Unit>
+		<Unit filename="/Users/mendesbarreto/Git/SpritesheetUnpacker/Texture2D.cpp">
+			<Option target="SpritesheetUnpacker"/>
+		</Unit>
+		<Unit filename="/Users/mendesbarreto/Git/SpritesheetUnpacker/Texture2D.h">
 			<Option target="SpritesheetUnpacker"/>
 		</Unit>
 		<Unit filename="/Users/mendesbarreto/Git/SpritesheetUnpacker/main.cpp">

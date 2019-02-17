@@ -150,6 +150,33 @@ SDLProgram.cpp.s:
 	$(MAKE) -f CMakeFiles/SpritesheetUnpacker.dir/build.make CMakeFiles/SpritesheetUnpacker.dir/SDLProgram.cpp.s
 .PHONY : SDLProgram.cpp.s
 
+Texture2D.o: Texture2D.cpp.o
+
+.PHONY : Texture2D.o
+
+# target to build an object file
+Texture2D.cpp.o:
+	$(MAKE) -f CMakeFiles/SpritesheetUnpacker.dir/build.make CMakeFiles/SpritesheetUnpacker.dir/Texture2D.cpp.o
+.PHONY : Texture2D.cpp.o
+
+Texture2D.i: Texture2D.cpp.i
+
+.PHONY : Texture2D.i
+
+# target to preprocess a source file
+Texture2D.cpp.i:
+	$(MAKE) -f CMakeFiles/SpritesheetUnpacker.dir/build.make CMakeFiles/SpritesheetUnpacker.dir/Texture2D.cpp.i
+.PHONY : Texture2D.cpp.i
+
+Texture2D.s: Texture2D.cpp.s
+
+.PHONY : Texture2D.s
+
+# target to generate assembly for a file
+Texture2D.cpp.s:
+	$(MAKE) -f CMakeFiles/SpritesheetUnpacker.dir/build.make CMakeFiles/SpritesheetUnpacker.dir/Texture2D.cpp.s
+.PHONY : Texture2D.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -189,6 +216,9 @@ help:
 	@echo "... SDLProgram.o"
 	@echo "... SDLProgram.i"
 	@echo "... SDLProgram.s"
+	@echo "... Texture2D.o"
+	@echo "... Texture2D.i"
+	@echo "... Texture2D.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

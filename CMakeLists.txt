@@ -10,5 +10,5 @@ find_package(SDL2_image REQUIRED)
 include_directories(${SDL2_INCLUDE_DIRS})
 include_directories(${SDL2_IMAGE_DIRS})
 
-add_executable(SpritesheetUnpacker main.cpp SDLProgram.cpp SDLProgram.h)
+add_executable(SpritesheetUnpacker main.cpp SDLProgram.cpp SDLProgram.h Texture2D.cpp Texture2D.h SDLExceptionThrower.h)
 target_link_libraries(SpritesheetUnpacker ${SDL2_LIBRARIES} ${SDL2_IMAGE_LIBRARIES})

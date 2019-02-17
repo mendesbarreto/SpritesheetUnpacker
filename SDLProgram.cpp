@@ -5,30 +5,44 @@
 #include "SDLProgram.h"
 #include <iostream>
 #include <string>
+#include <SDL_image.h>
+#include "SDLExceptionThrower.h"
+#include "Texture2D.h"
 
 constexpr char SDL_WINDOW_TITLE_NAME[21] = {"Spritesheet Unpacker"};
 
-void throwSdlException(const std::string message) {
-    std::string sdlErrorString = std::string(SDL_GetError());
-    std::string errorString = message + sdlErrorString;
-    throw errorString;
-}
-
 bool SDLProgram::startSDLUpdate() {
 
-    bool quit = false;
-    SDL_Event e;
+    bool canQuit = false;
+    SDL_Event event;
 
-    while (!quit) {
-        while (SDL_PollEvent(&e)) {
-            if (e.type == SDL_QUIT) {
-                quit = true;
+    auto texture2D = Texture2D::create("resource/megaman_poses.png", m_render);
+
+    while (!canQuit) {
+        while (SDL_PollEvent(&event)) {
+            if (event.type == SDL_QUIT) {
+                canQuit = true;
             }
+
+            //Clear screen
+            SDL_RenderClear( m_render );
+
+            //Render texture to screen
+            SDL_RenderCopy( m_render, texture2D->m_texture, NULL, NULL );
+
+            //Update screen
+            SDL_RenderPresent( m_render );
         }
     }
 
-    SDL_FreeSurface(m_windowSurface);
+    SDL_DestroyRenderer(m_render);
     SDL_DestroyWindow(m_window);
+
+    m_render = nullptr;
+    m_window = nullptr;
+    texture2D = nullptr;
+
+    IMG_Quit();
     SDL_Quit();
     return false;
 }
@@ -54,15 +68,25 @@ void SDLProgram::createWindow() {
     }
 }
 
+void SDLProgram::createRender() {
+    m_render = SDL_CreateRenderer(m_window, -1, SDL_RENDERER_ACCELERATED);
+    if (m_render == NULL) { throwSdlException("Could not create the render"); }
+}
 
-void SDLProgram::setupWindow() {
-    m_windowSurface = SDL_GetWindowSurface(m_window);
-    SDL_FillRect( m_windowSurface, NULL, SDL_MapRGB( m_windowSurface->format, 0xFF, 0xFF, 0xFF));
-    SDL_UpdateWindowSurface(m_window);
+void SDLProgram::setupBackgroundRender() {
+    SDL_SetRenderDrawColor( m_render, 0, 0xFF, 0xFF, 0xFF );
+}
+
+void SDLProgram::setupImageExtensionAllowed() {
+    if (!( IMG_Init(IMG_DEFAULT_EXTENSIONS_FLAGS) & IMG_DEFAULT_EXTENSIONS_FLAGS ) ) {
+        throwSdlImageException("Could initialize img default extensions");
+    }
 }
 
 SDLProgram::SDLProgram(){
     this->initSDLVideo();
     this->createWindow();
-    this->setupWindow();
+    this->createRender();
+    this->setupBackgroundRender();
+    this->setupImageExtensionAllowed();
 }

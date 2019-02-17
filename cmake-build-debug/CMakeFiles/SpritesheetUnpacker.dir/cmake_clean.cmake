@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/SpritesheetUnpacker.dir/main.cpp.o"
   "CMakeFiles/SpritesheetUnpacker.dir/SDLProgram.cpp.o"
+  "CMakeFiles/SpritesheetUnpacker.dir/Texture2D.cpp.o"
   "SpritesheetUnpacker.pdb"
   "SpritesheetUnpacker"
 )

@@ -33,3 +33,6 @@
 
 #JetBrains
 .idea
+
+#Manc OSX
+.DS_Store
